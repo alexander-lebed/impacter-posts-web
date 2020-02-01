@@ -1,0 +1,52 @@
+.Post {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  height: 270px;
+  width: 200px;
+}
+
+.Post-cover {
+  cursor: pointer;
+  object-fit: cover;
+  height: fit-content;
+  width: fit-content;
+  max-height: 150px;
+  max-width: 100%;
+}
+
+.Post-text {
+  height: 100%;
+  cursor: pointer;
+  padding: 5px;
+  text-align: center;
+}
+
+.Post-title {
+  font-size: 1.1em;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.Post-description {
+  margin-top: 5px;
+  line-height: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.Post-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-grow: 1;
+  i {
+    cursor: pointer;
+    padding: 8px;
+  }
+}

@@ -1,0 +1,81 @@
+
+.PostModal-actions {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  button {
+    margin-right: 5px;
+    min-width: 80px;
+  }
+}
+
+.PostModalRead {
+
+  .PostModalRead-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    object-fit: cover;
+    height: fit-content;
+    width: fit-content; // comment out to show the whole picture
+    max-height: 300px;
+    max-width: 100%;
+  }
+
+  .PostModalRead-title {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+  }
+
+  .PostModalRead-actions {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+.PostModalEdit {
+
+  .PostModalEdit-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    object-fit: cover;
+    height: fit-content;
+    width: fit-content; // comment out to show the whole picture
+    max-height: 300px;
+    max-width: 100%;
+  }
+
+  .PostModalEdit-title {
+    display: flex;
+    justify-content: center;
+    input {
+      text-align: center;
+      font-size: 1.1em;
+      font-weight: 500;
+    }
+  }
+
+  .PostModalEdit-img-input {
+    width: 100%;
+  }
+
+  .PostModalEdit-description {
+    width: 100%;
+    resize: vertical;
+  }
+
+  .PostModalEdit-label-input {
+    label {
+      display: inline-block;
+      float: left;
+      clear: left;
+      width: 80px;
+    }
+    input {
+      display: inline-block;
+    }
+  }
+}

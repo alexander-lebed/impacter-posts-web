@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostGrid should match snapshot 1`] = `
+<div>
+  
+  <div
+    className="Posts-grid"
+  >
+    <div
+      className="Post"
+    >
+      <div
+        className="lazyload-placeholder"
+        style={
+          Object {
+            "height": 150,
+          }
+        }
+      />
+    </div>
+    <div
+      className="Post"
+    >
+      <div
+        className="lazyload-placeholder"
+        style={
+          Object {
+            "height": 150,
+          }
+        }
+      />
+    </div>
+    <div
+      className="Post"
+    >
+      <div
+        className="lazyload-placeholder"
+        style={
+          Object {
+            "height": 150,
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
