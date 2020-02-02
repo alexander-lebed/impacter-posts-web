@@ -8,7 +8,6 @@ import './index.scss';
 
 type Props = {
     post: PostType,
-    editMode: boolean,
     showPost: (direction: $Values<typeof PostDirection>) => void,
     onClose: Function,
     onEdit: Function,
@@ -16,25 +15,24 @@ type Props = {
 }
 
 const PostModal = (props: Props) => {
-    const [editMode, setEditMode] = useState(props.editMode);
+    const [editMode, setEditMode] = useState(false);
     return (
         <>
-            {editMode ? (
-                <PostModalEdit
-                    post={props.post}
-                    onEdit={props.onEdit}
-                    onBack={() => setEditMode(false)}
-                    onClose={props.onClose}
-                />
-            ) : (
-                <PostModalRead
-                    post={props.post}
-                    showPost={props.showPost}
-                    onEdit={() => setEditMode(true)}
-                    onRemove={props.onRemove}
-                    onClose={() => props.onClose()}
-                />
-            )}
+            <PostModalEdit
+                isOpen={editMode}
+                post={props.post}
+                onEdit={props.onEdit}
+                onBack={() => setEditMode(false)}
+                onClose={props.onClose}
+            />
+            <PostModalRead
+                isOpen={!editMode}
+                post={props.post}
+                showPost={props.showPost}
+                onEdit={() => setEditMode(true)}
+                onRemove={props.onRemove}
+                onClose={() => props.onClose()}
+            />
         </>
     );
 };

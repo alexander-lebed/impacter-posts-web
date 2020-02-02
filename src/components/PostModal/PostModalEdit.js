@@ -8,6 +8,7 @@ import type {PostType} from '../../types';
 import './index.scss';
 
 type Props = {
+    isOpen: boolean,
     post: PostType,
     onEdit: Function,
     onBack: Function,
@@ -47,7 +48,7 @@ const PostModalEdit = (props: Props) => {
     };
 
     return (
-        <Modal className="PostModalEdit" isOpen={true} onClose={() => props.onClose()}>
+        <Modal className="PostModalEdit" isOpen={props.isOpen} onClose={() => props.onClose()}>
             <h3 className="PostModalEdit-title">
                 <input
                     type="text"
@@ -114,8 +115,12 @@ const PostModalEdit = (props: Props) => {
             </div>
 
             <div className="PostModal-actions">
-                <button className="primary-btn" onClick={() => save()}>Save</button>
-                <button onClick={() => props.onBack()}>Back</button>
+                <button className="primary-btn" onClick={() => save()}>
+                    Save
+                </button>
+                <button onClick={() => props.onBack()}>
+                    Back
+                </button>
             </div>
         </Modal>
     );

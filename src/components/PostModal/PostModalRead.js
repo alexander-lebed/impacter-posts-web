@@ -8,6 +8,7 @@ import ConfirmationModal from '../common/ConfirmationModal';
 import './index.scss';
 
 type Props = {
+    isOpen: boolean,
     post: PostType,
     showPost: (direction: $Values<typeof PostDirection>) => void,
     onEdit: Function,
@@ -27,7 +28,7 @@ const PostModalRead = (props: Props) => {
     const media = props.post.data.media[0];
     // const imgUrl = changeImageUrlSize(media.image, 300, 1200);
     return (
-        <Modal className="PostModalRead" isOpen={true} onClose={() => props.onClose()}>
+        <Modal className="PostModalRead" isOpen={props.isOpen} onClose={() => props.onClose()}>
             <h3 className="PostModalRead-title">
                 <button onClick={() => props.showPost(PostDirection.PREVIOUS)}>
                     <i className="fas fa-arrow-left" /> Prev
@@ -56,6 +57,7 @@ const PostModalRead = (props: Props) => {
                     <i className="fas fa-trash-alt" /> Delete
                 </button>
             </div>
+
             <ConfirmationModal
                 isOpen={showDeleteConfirmation}
                 onConfirm={onDeleteConfirm}

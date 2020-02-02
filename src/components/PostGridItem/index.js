@@ -50,14 +50,13 @@ const Post = (props: Props) => {
                     />
                 </div>
 
-                {showEditModal && (
-                    <PostModalEdit
-                        post={props.post}
-                        onEdit={props.onEdit}
-                        onBack={() => setShowEditModal(false)}
-                        onClose={() => setShowEditModal(false)}
-                    />
-                )}
+                <PostModalEdit
+                    isOpen={showEditModal}
+                    post={props.post}
+                    onEdit={props.onEdit}
+                    onBack={() => setShowEditModal(false)}
+                    onClose={() => setShowEditModal(false)}
+                />
 
                 <ConfirmationModal
                     isOpen={showDeleteConfirmation}
