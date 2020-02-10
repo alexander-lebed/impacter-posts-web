@@ -10,13 +10,12 @@ export type Props = {
 }
 
 const Modal = (props: Props) => {
+    if (!props.isOpen) {
+        return null;
+    }
     return (
-        <div
-            style={{display: props.isOpen ? 'block' : 'none'}}
-            className="Modal-outer"
-        >
+        <div className="Modal-outer">
             <div className="Modal-overlay" onClick={props.onClose} />
-            <div onClick={props.onClose} />
             <div className={`Modal ${props.className || ''}`}>
                 {props.children}
             </div>
