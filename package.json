@@ -45,7 +45,7 @@
     "flow-bin": "^0.117.0",
     "http-errors": "^1.7.3",
     "lorem-ipsum": "^2.0.3",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "pump": "^3.0.0",
     "react-image-fallback": "^8.0.0",
     "react-lazyload": "^2.6.5",
